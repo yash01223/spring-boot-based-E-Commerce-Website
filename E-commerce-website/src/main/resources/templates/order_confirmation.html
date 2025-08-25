@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="@{/css/style.css}">-->
+</head>
+<body>
+<!--<div th:replace="fragments/header :: header"></div>-->
+
+<div class="container mt-4">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Thank You for Your Order!</h1>
+        <p class="lead">Your order has been placed successfully.</p>
+        <hr class="my-4">
+        <p>Order ID: <strong th:text="${order.id}">Order ID</strong></p>
+        <p>Order Date: <strong th:text="${order.orderDate}">Order Date</strong></p>
+        <p>Total Amount: <strong th:text="'$' + ${order.total}">Total</strong></p>
+        <a href="/" class="btn btn-primary">Continue Shopping</a>
+        <a href="/order/history" class="btn btn-secondary">View Order History</a>
+    </div>
+</div>
+
+<!--<div th:replace="fragments/footer :: footer"></div>-->
+
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>E-commerce Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="@{/css/style.css}">-->
+</head>
+<body>
+<!--<div th:replace="fragments/header :: header"></div>-->
+
+<div class="container mt-4">
+    <div class="jumbotron">
+        <h1>Welcome to Our Store</h1>
+        <p>Find the best products at the best prices!</p>
+    </div>
+
+    <h2>Featured Products</h2>
+    <div class="row">
+        <div class="col-md-3 mb-4" th:each="product : ${products}">
+            <div class="card">
+<!--                <img th:src="${product.imageUrl}" class="card-img-top" alt="Product Image">-->
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${product.name}">Product Name</h5>
+                    <p class="card-text" th:text="'$' + ${product.price}">Price</p>
+                    <a th:href="@{/product/{id}(id=${product.id})}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div th:replace="fragments/footer :: footer"></div>-->
+
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
+</body>
+</html>
