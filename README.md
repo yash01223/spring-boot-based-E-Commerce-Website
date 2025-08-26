@@ -1,0 +1,4 @@
+- Developed an E-commerce backend application using Spring Boot, Spring Data JPA, Spring MVC and MySQL
+-  Implemented entity relationships and validation for input handling
+-   Utilized Postman to validate endpoints and data interactions.
+-   Gained hands-on expertise in Spring Boot application architecture, REST API development, database design
